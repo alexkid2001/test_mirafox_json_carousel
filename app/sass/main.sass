@@ -1,0 +1,168 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	background-color: #eee
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+::selection
+	background-color: $accent
+	color: #fff
+
+.sec_title 
+	text-align: center
+.card_items, #owl-dynamic
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+	font-size: 14px
+	.card_item
+		box-sizing: border-box
+		margin: 15px 10px
+		word-wrap: break-word
+		width: calc(100% / 10 * 2 - 30px)
+		min-width: 198px
+		.card_link
+			.item_wrap
+				border: 1px #ddd solid
+				background-color: #fff
+				transition: all 0.3s
+				.card_item_img
+					width: 100%
+					img
+						width: 100%
+				.card_item_content
+					padding: 5px 15px
+					hr
+						margin: 3px 0
+					.card_item_desc 
+						text-align: justify
+						color: #000
+					.card_item_footer_top
+						display: flex
+						justify-content: space-between
+						margin-top: 10px
+						.user_name
+							display: inline-block
+							color: #888
+							.fas
+								color: #ddd
+								margin-right: 3px
+								font-size: 12px
+						.rating
+							color: orange
+							font-size: 15px
+							font-weight: bold
+							.fas
+								margin-right: 3px
+							span
+								color: #aaa
+								font-size: 14px
+								font-weight: normal
+					.card_item_footer_bottom
+						display: flex
+						justify-content: space-between
+						.likes
+							color: #ccc
+							font-size: 16px
+						.price
+							font-size: 16px
+							color: green
+							font-weight: bold
+							.fas
+								font-size: 15px
+			&:hover
+				.item_wrap
+					box-shadow: 0 0 10px green
+					transition: all 0.3s
+					text-decoration: none
+					.card_item_content
+						.card_item_desc
+							text-decoration: none !important
+							color: #000
+
+#owl-dynamic 
+	display: block;
+	.card_item
+		width: auto
+		min-width: none
+		background-color: transparent
+		.card_link
+			width: 198px
+			.item_wrap
+				width: 198px
+				margin: auto
+				background-color: #fff
+.slider_wrap
+	position: relative
+	width: calc( 100% - 55px )
+	margin: auto
+	position: relative
+	.prev, .next
+		width: 30px
+		height: 60px
+		background-color: #ccc
+		position: absolute
+		top: calc(50% - 30px)
+		color: #fff
+		text-align: center
+		padding: 16px 0
+		i
+			display: inline-block
+			font-size: 30px
+	.prev
+		left: -30px
+	.next
+		right: -40px
+
+
+@import "media" // Всегда в конце
